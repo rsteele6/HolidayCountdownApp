@@ -1,0 +1,27 @@
+#timer-wrapper
+{
+    @include flexCenter;
+}
+
+#timer-wrapper
+{
+    padding-top:30px;
+}
+
+.timer-spacing
+{
+    padding-left: 10px;
+}
+
+.timer-spacing p
+{
+    font-size: 35px;
+    @include mq(768px)
+    {
+        font-size: 41px;
+    }
+}
+.timer-label
+{
+    text-align:center;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- JavaScript -->
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <main>
+        <div id="content-wrapper">
+            <h1>Holiday Countdown Timer</h1>
+            <section>
+                <div id="dropdown-wrapper">
+                    <!-- Dropdown menu -->
+                    <select id="holiday-menu">
+                        <option value="">Choose a holiday</option>
+                        <option value="new-year">New Year</option>
+                        <option value="memorial-day">Memorial Day</option>
+                        <option value="independence-day">Independence Day</option>
+                        <option value="labor-day">Labor Day</option>
+                        <option value="thanksgiving-day">Thanksgiving Day</option>
+                        <option value="christmas-day">Christmas Day</option>
+                    </select>
+                </div>
+            </section>
+            <section>
+                <div id="timer-wrapper">
+                    <div id="days" class="timer-spacing">
+                        <p id="timer-days"></p>
+                        <span class="timer-label">Days</span>
+                    </div>
+                     
+                    <div id="hours" class="timer-spacing">
+                        <p id="timer-hours"></p> 
+                        <span class="timer-label">Hours</span>
+                    </div>
+                    <div id="minutes" class="timer-spacing">
+                        <p id="timer-minutes"></p> 
+                        <span class="timer-label">Min</span>
+                    </div>
+                    <div id="seconds" class="timer-spacing">
+                        <p id="timer-seconds"></p> 
+                        <span class="timer-label">Sec</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
