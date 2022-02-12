@@ -98,6 +98,7 @@ Changes the background image based on the holiday selected by the user.
 
 const switchBackground = (holiday) =>
 {
+    // Set background image based on selected holiday. The empty string is the initial "Choose a holiday" menu option
     switch(holiday)
     {
         case "":
@@ -130,38 +131,32 @@ const switchBackground = (holiday) =>
 // Main function
 const initApp = () =>
 {
-    let holidayMenu = document.getElementById("holiday-menu");
+    const holidayMenu = document.getElementById("holiday-menu");
     let intervalID;
-    let targetDate;
 
     holidayMenu.addEventListener("change", (event) =>
     {
         clearInterval(intervalID);
         clearContent();
-        targetDate = getTargetDate(event.target.value);
+        const targetDate = getTargetDate(event.target.value);
         switchBackground(event.target.value);
 
         intervalID = setInterval(function ()
         {
-            console.log(targetDate);
+            //console.log(targetDate);
             displayCountdown(targetDate);
         }, 1000);
 
-        if (targetDate === "")
+        if (!targetDate)
         {
             clearInterval(intervalID);
         }
-        
     });
 }
 
 // End function defs
 
-document.addEventListener("readystatechange", (event) =>
+document.addEventListener('DOMContentLoaded', (event) =>
 {
-    if(event.target.readyState === "complete")
-    {
-        console.log("readystate: complete");
-        initApp();
-    }
+    initApp();
 });

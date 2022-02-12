@@ -21,16 +21,23 @@ html
 body
 {
     background-color: $default-background-color;
-    background-size:cover;
     min-height: 100vh;
     padding: 0.5rem;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+main
+{
+    margin-top: 50%;
+    margin-bottom: 50%;
 }
 
 #content-wrapper
 {
     max-width: 90%;
     margin:auto;
-    padding-top: 10em;
 }
 
 h1
